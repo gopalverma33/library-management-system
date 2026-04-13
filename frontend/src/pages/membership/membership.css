@@ -1,0 +1,87 @@
+.membership-page {
+  min-height: calc(100vh - 150px);
+  background: #f5f8fc;
+  padding: 2rem 1rem;
+}
+
+.membership-card {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.membership-card h2 {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.membership-subtitle {
+  margin: 0.35rem 0 1.4rem;
+  color: #64748b;
+}
+
+.membership-field {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.membership-field label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.membership-card select {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0 0.75rem;
+  background: #fff;
+}
+
+.membership-search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.membership-btn {
+  border: none;
+  border-radius: 10px;
+  height: 42px;
+  padding: 0 1.1rem;
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.membership-btn.secondary {
+  background: #334155;
+}
+
+.membership-btn.danger {
+  background: #dc2626;
+}
+
+.membership-details {
+  margin-top: 1.3rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.membership-details h3 {
+  margin-bottom: 0.8rem;
+  color: #1e293b;
+}
+
+.membership-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
