@@ -111,104 +111,59 @@ A full-stack Library Management System built using the MERN stack (MongoDB, Expr
 
 ---
 
-## 📂 Project Structure
-
----
+## 🛠️ Tech Stack ### Frontend - React.js (v18.2) - React Router v6 - React Bootstrap / CSS - Axios - React Hook Form - React Toastify - Context API - Cloudinary (image uploads) ### Backend - Node.js (v18.x) - Express.js (v4.18) - MongoDB Atlas - Mongoose - JWT Authentication - Bcrypt.js - Nodemailer (emails/OTP) - Multer + Cloudinary ### Deployment - Frontend: Vercel - Backend: Render - Database: MongoDB Atlas - Media Storage: Cloudinary --- ## 🧱 Project Structure
 LibraryManagement/
-│
+
 ├── backend/
-│ ├── models/
-│ ├── controllers/
-│ ├── routes/
-│ ├── middleware/
-│ └── config/
-│
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   └── config/
+
 ├── frontend/
-│ ├── components/
-│ ├── pages/
-│ ├── context/
-│ └── utils/
-
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone Repository
-
-``bash
-git clone https://github.com/gopalverma33/Library-Management.git
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── context/
+│   └── utils/
+--- ## ⚙️ Installation & Setup ### 1. Clone the Repository
+bash
+git clone https://github.com/gopalverma/Library-Management.git
 cd Library-Management
-2️⃣ Install Dependencies
-# backend
+--- ### 2. Install Dependencies #### Backend
+bash
 cd backend
 npm install
-
-# frontend
-cd ../frontend
+#### Frontend
+bash
+cd frontend
 npm install
-3️⃣ Environment Variables
-Backend .env
-EMAIL_USER=your_email
-EMAIL_PASS=your_password
-EMAIL_SERVICE=your_service
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
+--- ### 3. Environment Variables #### Backend .env
+env
+EMAIL_USER=your_email_address
+EMAIL_PASS=your_email_password
+EMAIL_SERVICE=your_email_service
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
 CLOUD_NAME=your_cloud_name
-CLOUD_API_KEY=your_api_key
-CLOUD_API_SECRET=your_api_secret
-Frontend .env
-VITE_BACKEND_URL=https://library-management-system-3-p9wr.onrender.com
-4️⃣ Run the Application
-# backend
+CLOUD_API_KEY=your_cloud_api_key
+CLOUD_API_SECRET=your_cloud_api_secret
+#### Frontend .env
+env
+VITE_BACKEND_URL=https://your-backend-url.onrender.com
+--- ### 4. Run the Application #### Backend
+bash
 nodemon index.js
-
-# frontend
+#### Frontend
+bash
 npm run dev
-📡 API Endpoints (Sample)
-Auth
-POST /api/users/register
-POST /api/users/login
-Books
-GET /api/books
-POST /api/books
-PUT /api/books/:id
-DELETE /api/books/:id
-Membership
-GET /api/membership/:userId
-PUT /api/membership/extend/:id
-PUT /api/membership/cancel/:id
-Issue / Return
-POST /api/issue
-POST /api/return
-🧪 API Test
-
-Test backend:
-
-GET https://library-management-system-3-p9wr.onrender.com/
-📈 Future Improvements
-Payment integration for memberships
-Email reminders for due dates
-Advanced analytics dashboard
-Mobile responsiveness improvements
-Pagination & performance optimization
-👨‍💻 Author
-
-Gopal Verma
-
-GitHub: https://github.com/gopalverma33
-LinkedIn: https://www.linkedin.com/in/gopal18
-Email: gpverma869@gmail.com
-⭐ Support
-
-If you like this project:
-
-⭐ Star the repository
-🍴 Fork it
-🤝 Contribute
-📜 License
-
-This project is for educational purposes only.
+--- ## 📡 API Endpoints (Examples) ### Auth - POST /api/users/register - POST /api/users/login ### Books - GET /api/books - POST /api/books - PUT /api/books/:id - DELETE /api/books/:id ### Membership - GET /api/membership/:userId - PUT /api/membership/extend/:id - PUT /api/membership/cancel/:id ### Issue/Return - POST /api/issue - POST /api/return --- ## 🧠 Key Logic
+js
+if (membership.status !== "active" || new Date(membership.endDate) < new Date()) {
+  return res.status(400).json({ message: "Membership expired ❌" });
+}
+--- ## 📌 Future Improvements - Payment integration for memberships - Email notifications (due reminders) - Advanced analytics dashboard - Role-based access control (RBAC) - Pagination & performance optimization - Mobile responsiveness enhancements --- ## 👨‍💻 Author **Gopal Verma** - GitHub: https://github.com/gopalverma33 - LinkedIn: https://www.linkedin.com/in/gopal18 - Email: gpverma869@gmail.com --- ## 📜 License This project is for educational purposes only.
 
 ## 🧠 Core Logic Example
 
