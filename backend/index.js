@@ -6,7 +6,7 @@ require("dotenv").config();
 
 // Allowed origins can be configured from env as comma-separated values.
 const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
-  "http://localhost:5173,https://library-management-system-3-p9wr.onrender.com")
+  "https://library-management-system-3-p9wr.onrender.com")
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
@@ -14,14 +14,16 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
 // ✅ CORS Configuration (ONLY ONCE)
 app.use(cors({
   origin: function (origin, callback) {
-    // allow requests with no origin (like Postman)
     if (!origin) return callback(null, true);
 
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
+    if (
+      origin.includes("vercel.app")  // ✅ allow all vercel deployments
+
+    ) {
+      return callback(null, true);
     }
+
+    callback(new Error("Not allowed by CORS"));
   },
   credentials: true
 }));
