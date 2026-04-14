@@ -136,22 +136,32 @@ LibraryManagement/
 
 ### 1️⃣ Clone the Repository
 
-``bash
+
 git clone https://github.com/gopalverma/Library-Management.git
 cd Library-Management
---- ### 2. Install Dependencies #### Backend
+
+--- 
+### 2. Install Dependencies 
+#### Backend
+
 bash
 cd backend
 npm install
+
 #### Frontend
+
 bash
 cd frontend
 npm install
 
 3️⃣ Environment Variables
+
 🔹 Backend .env
+
 EMAIL_USER=your_email_address
+
 EMAIL_PASS=your_email_password
+
 EMAIL_SERVICE=your_email_service
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
