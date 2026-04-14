@@ -111,8 +111,41 @@ A full-stack Library Management System built using the MERN stack (MongoDB, Expr
 
 ---
 
-## 🛠️ Tech Stack ### Frontend - React.js (v18.2) - React Router v6 - React Bootstrap / CSS - Axios - React Hook Form - React Toastify - Context API - Cloudinary (image uploads) ### Backend - Node.js (v18.x) - Express.js (v4.18) - MongoDB Atlas - Mongoose - JWT Authentication - Bcrypt.js - Nodemailer (emails/OTP) - Multer + Cloudinary ### Deployment - Frontend: Vercel - Backend: Render - Database: MongoDB Atlas - Media Storage: Cloudinary --- ## 🧱 Project Structure
-LibraryManagement/
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+- React.js (v18)
+- React Router v6
+- Axios
+- React Hook Form
+- Context API
+- React Toastify
+- Bootstrap / CSS
+
+---
+
+### ⚙️ Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- Bcrypt.js
+- Nodemailer
+- Multer + Cloudinary
+
+---
+
+### 🚀 Deployment
+- Frontend: Vercel  
+- Backend: Render  
+- Database: MongoDB Atlas  
+- Media Storage: Cloudinary  
+
+---
+
+## 📂 Project Structure
+
 
 ├── backend/
 │   ├── models/
