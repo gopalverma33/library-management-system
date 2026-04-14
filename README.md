@@ -115,21 +115,28 @@ A full-stack Library Management System built using the MERN stack (MongoDB, Expr
 ### 📂 Project Structure
 
 
+LibraryManagement/
+│
 ├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   └── config/
-
+│ ├── models/
+│ ├── routes/
+│ ├── controllers/
+│ ├── middleware/
+│ └── config/
+│
 ├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   └── utils/
---- ## ⚙️ Installation & Setup ### 1. Clone the Repository
-bash
+│ ├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── context/
+│ └── utils/
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+``bash
 git clone https://github.com/gopalverma/Library-Management.git
 cd Library-Management
 --- ### 2. Install Dependencies #### Backend
@@ -140,8 +147,9 @@ npm install
 bash
 cd frontend
 npm install
---- ### 3. Environment Variables #### Backend .env
-env
+
+3️⃣ Environment Variables
+🔹 Backend .env
 EMAIL_USER=your_email_address
 EMAIL_PASS=your_email_password
 EMAIL_SERVICE=your_email_service
@@ -150,21 +158,34 @@ JWT_SECRET=your_jwt_secret_key
 CLOUD_NAME=your_cloud_name
 CLOUD_API_KEY=your_cloud_api_key
 CLOUD_API_SECRET=your_cloud_api_secret
-#### Frontend .env
-env
+🔹 Frontend .env
 VITE_BACKEND_URL=https://your-backend-url.onrender.com
---- ### 4. Run the Application #### Backend
-bash
+
+4️⃣ Run the Application
+Backend
 nodemon index.js
-#### Frontend
-bash
+Frontend
 npm run dev
---- ## 📡 API Endpoints (Examples) ### Auth - POST /api/users/register - POST /api/users/login ### Books - GET /api/books - POST /api/books - PUT /api/books/:id - DELETE /api/books/:id ### Membership - GET /api/membership/:userId - PUT /api/membership/extend/:id - PUT /api/membership/cancel/:id ### Issue/Return - POST /api/issue - POST /api/return --- ## 🧠 Key Logic
-js
-if (membership.status !== "active" || new Date(membership.endDate) < new Date()) {
-  return res.status(400).json({ message: "Membership expired ❌" });
-}
---- ## 📌 Future Improvements - Payment integration for memberships - Email notifications (due reminders) - Advanced analytics dashboard - Role-based access control (RBAC) - Pagination & performance optimization - Mobile responsiveness enhancements --- ## 👨‍💻 Author **Gopal Verma** - GitHub: https://github.com/gopalverma33 - LinkedIn: https://www.linkedin.com/in/gopal18 - Email: gpverma869@gmail.com --- ## 📜 License This project is for educational purposes only.
+
+## 📡 API Endpoints (Examples) 
+### Auth 
+- POST /api/users/register
+- POST /api/users/login
+  
+### Books
+- GET /api/books
+- POST /api/books 
+- PUT /api/books/:id
+- DELETE /api/books/:id
+
+### Membership
+- GET /api/membership/:userId
+- PUT /api/membership/extend/:id -
+- PUT /api/membership/cancel/:id
+- 
+ ### Issue/Return 
+- POST /api/issue
+- POST /api/return ---
 
 ## 🧠 Core Logic Example
 
