@@ -6,7 +6,7 @@ require("dotenv").config();
 
 // Allowed origins can be configured from env as comma-separated values.
 const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
-  "http://localhost:5173,https://library-management-app-gopal.vercel.app,https://library-management-app-karan.vercel.app,https://erp-library-management.vercel.app")
+  "http://localhost:5173,https://library-management-system-3-p9wr.onrender.com")
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
@@ -27,7 +27,10 @@ app.use(cors({
 }));
 
 // ✅ Handle Preflight Requests
-app.options("*", cors());
+app.options("*", cors({
+  origin: true,
+  credentials: true
+}));
 
 // ✅ Middleware
 app.use(express.json());
